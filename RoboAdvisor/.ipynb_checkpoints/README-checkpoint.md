@@ -4,14 +4,14 @@
 ## OUTPUT RESULT:
 
 
-![Robo Advisor test with Lambda](RoboAdvisor/Starter_Files/result_gif/chatbot.gif)
+![Robo Advisor test with Lambda](Starter_Files/result_gif/chatbot.gif)
 
 ---
 
 ## Project
 
 
-![Robot](RoboAdvisor/Images/robot.jpg)
+![Robot](Images/robot.jpg)
 
 *Photo by [Alex Knight](https://www.pexels.com/@alex-knight-1272316?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/high-angle-photo-of-robot-2599244/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) | [Free License](https://www.pexels.com/photo-license/)*
 
@@ -32,11 +32,11 @@ You are asked to accomplish the following main tasks:
 
 ### Files
 
-* [lambda_function.py](RoboAdvisor/Starter_Files/lambda_function.py)
-* [correct_dialog.txt](RoboAdvisor/Test_Cases/correct_dialog.txt)
-* [age_error.txt](RoboAdvisor/Test_Cases/age_error.txt)
-* [incorrect_amount_error.txt](RoboAdvisor/Test_Cases/incorrect_amount_error.txt)
-* [negative_age_error.txt](RoboAdvisor/Test_Cases/negative_age_error.txt)
+* [lambda_function.py](Starter_Files/lambda_function.py)
+* [correct_dialog.txt](Test_Cases/correct_dialog.txt)
+* [age_error.txt](Test_Cases/age_error.txt)
+* [incorrect_amount_error.txt](Test_Cases/incorrect_amount_error.txt)
+* [negative_age_error.txt](Test_Cases/negative_age_error.txt)
 
 ---
 
@@ -84,13 +84,13 @@ Configure the response cards for the `riskLevel` slot as is shown bellow:
 
 | Card 1                              | Card 2                              |
 | ----------------------------------- | ----------------------------------- |
-| ![Card 1 sample](RoboAdvisor/Images/card1.png)  | ![Card 2 sample](RoboAdvisor/Images/card2.png)  |
+| ![Card 1 sample](Images/card1.png)  | ![Card 2 sample](Images/card2.png)  |
 
 | Card 3                              | Card 4                              |
 | ----------------------------------- | ----------------------------------- |
-| ![Card 3 sample](RoboAdvisor/Images/card3.png)  | ![Card 4 sample](RoboAdvisor/Images/card4.png)  |
+| ![Card 3 sample](Images/card3.png)  | ![Card 4 sample](Images/card4.png)  |
 
-**Note:** You can download free icons from [this website](https://www.iconfinder.com/) or you can use the icons provided in the [`Icons` directory](RoboAdvisor/Icons/).
+**Note:** You can download free icons from [this website](https://www.iconfinder.com/) or you can use the icons provided in the [`Icons` directory](Icons/).
 
 Move to the *Confirmation Prompt* section, and set the following messages:
 
@@ -99,19 +99,19 @@ Move to the *Confirmation Prompt* section, and set the following messages:
 
 Leave the error handling configuration for the `RecommendPortfolio` bot with the default values.
 
-![Error handling configuration](RoboAdvisor/Images/error_handling.png)
+![Error handling configuration](Images/error_handling.png)
 
 #### Build and Test the Robo Advisor
 
 In this section, we will test your Robo Advisor. Build the bot and test it in the chatbot window. You should see a conversation like the one below.
 
-![Robo Advisor test](RoboAdvisor/Images/bot-test-no-lambda.gif)
+![Robo Advisor test](Images/bot-test-no-lambda.gif)
 
 #### Enhance the Robo Advisor with an Amazon Lambda Function
 
 In this section, we will create an Amazon Lambda function that will validate the data provided by the user on the Robo Advisor. Start by creating a new lambda function from scratch and name it `recommendPortfolio`. Select Python 3.7 as runtime.
 
-Use the starter code provided on [lambda_function.py](RoboAdvisor/Starter_Files/lambda_function.py) and complete the `recommend_portfolio()` function by following these guidelines:
+Use the starter code provided on [lambda_function.py](Starter_Files/lambda_function.py) and complete the `recommend_portfolio()` function by following these guidelines:
 
 ##### User Input Validation
 
@@ -130,11 +130,11 @@ Once the intent is fulfilled, the bot should response with an investment recomme
 * **very high:** "0% bonds (AGG), 100% equities (SPY)"
 
 
-Test it using the [sample test cases](RoboAdvisor/Test_Cases/) provided.
+Test it using the [sample test cases](Test_Cases/) provided.
 
 After successfully testing the code, open the Amazon Lex Console and navigate to the `RecommendPortfolio` bot configuration, integrate your new lambda function by selecting it in the _Lambda initialization and validation_ and _Fulfillment_ sections. Build your bot, and you should have a conversation as follows.
 
-![Robo Advisor test with Lambda](RoboAdvisor/Images/bot-test-with-lambda.gif)
+![Robo Advisor test with Lambda](Images/bot-test-with-lambda.gif)
 
 
 ### Hints
